@@ -1,0 +1,68 @@
+.weather-forecast {
+  display: none;
+  flex-direction: column;
+  min-width: 70%;
+  position: relative;
+  z-index: 1;
+
+  &.active{
+    display: flex;
+    z-index: 10;
+  }
+
+  .spell-note{
+    color: #687179;
+  }
+
+  .weather-form {
+    display: flex;
+    margin: 20px auto;
+    min-width: 70%;
+
+    input{
+      font-size: 1.1rem;
+    }
+
+    input[type="search"]{
+      flex: 3;
+      padding-left: 10px;
+    }
+
+    input[type="submit"]{
+      flex: 1;
+      border: none;
+      outline: none;
+      background: #339af0;
+      color: #fff;
+      padding: 10px 20px;
+    }
+  }
+
+  .weather-info{
+    
+    *{
+      font-size: 1.3rem;
+    }
+
+    img{
+      width: 80px;
+    }
+
+    .weather-main{
+      font-size: 1.5em;
+    }
+
+    .weather-temp{
+      font-size: 1.6em;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .weather-description{
+      margin-top: 10px;
+      text-transform: capitalize;
+      font-size: 1rem;
+    }
+
+  }
+}

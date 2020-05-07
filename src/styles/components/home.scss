@@ -1,0 +1,31 @@
+
+.home{
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  &.active{
+    display: flex;
+    z-index: 10;;
+  }
+
+  .App-brand {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    & + p{
+      margin-top: 20px;
+    }
+  }
+
+  .home-info{
+    max-width: 80%;
+    margin: auto;
+  }
+}

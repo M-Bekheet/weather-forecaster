@@ -1,0 +1,29 @@
+$main-bg: #26293a;
+
+*::selection{
+  color: #fff;
+  background-color: $main-bg;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero{
+  background: $main-bg;
+  color: #fff;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  position: relative;
+  line-height: 1.8em;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+
+@media all and (max-width: 720px){
+  html{
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,78 @@
+.slider{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+
+  .slider-buttons{
+    position: absolute;
+    z-index: 9999999;
+    right: -40px;
+    top: 20vh;
+
+    .header{
+      transform: rotate(90deg);
+      display: flex;
+
+      ul li{
+        display: inline-block;
+
+        &:nth-child(1){
+          margin-right: 20px;
+        }
+      }
+
+    }
+    .slider-indicators{
+      margin-top: 100px;
+      padding-bottom: 10px;
+
+      button{
+        border: none;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: relative;
+        background: #ffff00;
+        padding: 0;
+        transition: all 0.3s ease-in-out;
+        outline: none;
+
+        &.active{
+          width: 20px;
+          height: 20px;
+
+          &:after{
+            display: inline-block;
+            top: calc(20%);
+          }
+        }
+        
+        &:after{
+          content: "Home";
+          display: none;
+          position: absolute;
+          right: calc(100% + 10px);
+          top: calc(-10%);
+          color: #fff;
+          font-weight: 700;
+        }
+      }
+
+      li:nth-child(2) button:after{
+        content: 'Weather'
+      }
+    }
+  }
+}
+
+
+@media all and (max-width: 720px){
+ .slider .slider-buttons{
+   top: 40vh;
+ }
+}
