@@ -28,7 +28,6 @@ export default  function WeatherForecast(props) {
       url = `https://api.openweathermap.org/data/2.5/weather?lat=${currentPosition.latitude}&lon=${currentPosition.longitude}&appid=6eb65a66b730e9f86203db9662bbb047&units=metric`;
     } 
 
-    console.log(city, url)
     if(url){
       axios.get(url)
         .then(res => {
@@ -39,17 +38,12 @@ export default  function WeatherForecast(props) {
           }
         })
         .catch((err) => {
-          console.log('catching', !err.response)
           if (!err.response) { return ''; }
-          console.log('catching1')
           if (err.response.status === 404) {
-            console.log('404')
             setHasLocalInfo(false);
             setError('This city cannot be found. Kindly write it correctly')
-            console.log(error)
           } else {
             setError('Something went wrong, kindly check your network connection')
-            console.log(error)
           }
         });
     }

@@ -4,7 +4,7 @@ import WatherForecast from './WeatherForecast'
 import '../styles/components/slider.scss';
 
 export default function Slider (props) {
-  const [homeIsVisible, setHomeIsVisible] = useState('true')
+  const [homeIsVisible, setHomeIsVisible] = useState(false)
 
   const handleSlideVisibility = (e, hideHome) => {
     e.preventDefault();
